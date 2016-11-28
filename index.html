@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Like a tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Like a tree">
+<meta property="og:url" content="http://yoursite.com/blog/index.html">
+<meta property="og:site_name" content="Like a tree">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Like a tree">
+  
+    <link rel="alternate" href="/atom.xml" title="Like a tree" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Like a tree</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-test4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/11/26/test4/" class="article-date">
+  <time datetime="2016-11-26T10:05:36.000Z" itemprop="datePublished">2016-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#test4</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/11/26/test4/" data-id="civz2kp7y0003b5i7xiww4lfa" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test0" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/11/26/test0/" class="article-date">
+  <time datetime="2016-11-26T10:04:02.000Z" itemprop="datePublished">2016-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="React-webpack-部署"><a href="#React-webpack-部署" class="headerlink" title="React webpack 部署"></a>React webpack 部署</h1><p>在package.json的script內會寫下類似如下</p>
+<p>package.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;build&quot;: &quot;NODE_ENV=production API_HOST=http://rdpc.git4u.net:2650/ babel-node client/startProd.js&quot;,</div></pre></td></tr></table></figure></p>
+<p>start.prod<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">'path'</span>;</div><div class="line"><span class="keyword">import</span> webpack <span class="keyword">from</span> <span class="string">'webpack'</span>;</div><div class="line"><span class="keyword">import</span> _debug <span class="keyword">from</span> <span class="string">'debug'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> debug = _debug(<span class="string">'Redux-Bolierplate:Build'</span>);</div><div class="line"></div><div class="line">debug(<span class="string">'Start Build Source...'</span>);</div><div class="line"></div><div class="line">webpack(&#123;</div><div class="line">  <span class="attr">devtool</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">entry</span>: [</div><div class="line">    <span class="string">'babel-polyfill'</span>,</div><div class="line">    path.join(__dirname, <span class="string">'entry.js'</span>),</div><div class="line">  ],</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">path</span>: path.join(__dirname, <span class="string">'build'</span>),</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span>,</div><div class="line">    <span class="attr">publicPath</span>: <span class="string">'/build/'</span>,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.DefinePlugin(&#123;</div><div class="line">      <span class="attr">API_HOST</span>: <span class="string">`"<span class="subst">$&#123;process.env.API_HOST || <span class="string">'/api'</span>&#125;</span>"`</span>,</div><div class="line">      <span class="attr">API_VERSION</span>: <span class="string">`"<span class="subst">$&#123;process.env.API_VERSION || <span class="string">'0.0.0'</span>&#125;</span>"`</span>,</div><div class="line">      <span class="string">'process.env.NODE_ENV'</span>: <span class="string">'"production"'</span>,</div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(),</div><div class="line">    <span class="keyword">new</span> webpack.optimize.DedupePlugin(),</div><div class="line">    <span class="keyword">new</span> webpack.NoErrorsPlugin(),</div><div class="line">  ],</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [&#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'babel'</span>,</div><div class="line">      <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">      <span class="attr">include</span>: __dirname,</div><div class="line">    &#125;, &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.(jpe?g|png|gif|svg)$/i</span>,</div><div class="line">      <span class="attr">loaders</span>: [</div><div class="line">        <span class="string">'file?hash=sha512&amp;digest=hex&amp;name=[hash].[ext]'</span>,</div><div class="line">        <span class="string">'image-webpack?bypassOnDebug&amp;optimizationLevel=7&amp;interlaced=false'</span>,</div><div class="line">      ],</div><div class="line">      <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">    &#125;, &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span></div><div class="line">    &#125;],</div><div class="line">  &#125;,</div><div class="line">&#125;, (err) =&gt; &#123;</div><div class="line">  <span class="keyword">if</span> (err) &#123;</div><div class="line">    debug(err);</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Build Successful!'</span>);</div><div class="line">    debug(<span class="string">'Build Successful!'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>startProd即為webpack會打包成bundle.js的指令檔案</p>
+<p>在此案例中我們在檔案內寫output為<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">  <span class="attr">path</span>: path.join(__dirname, <span class="string">'build'</span>),</div><div class="line">  <span class="attr">filename</span>: <span class="string">'bundle.js'</span>,</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/build/'</span>,</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>所以專案build完會產生一個build資料夾，裡面會有buldle.js</p>
+<p>##之後開始設定nginx環境</p>
+<p>安裝好nginx後我們先去改他的config</p>
+<p>mac預設路徑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/etc/nginx/</div></pre></td></tr></table></figure></p>
+<p>ex:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">http &#123;</div><div class="line">server &#123;</div><div class="line">  listen 8081 default_server;</div><div class="line">  server_name _;</div><div class="line">  root /var/www/um1215-webclient/build;</div><div class="line">  index index.htm index.html;</div><div class="line">  access_log /var/log/um1215-webclient.access.log;</div><div class="line">  error_log /var/log/um1215-webclient.error.log;</div><div class="line">  client_max_body_size 500m;</div><div class="line"></div><div class="line"> location ~ ^/build &#123;</div><div class="line">    root /var/www/um1215-webclient;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  location / &#123;</div><div class="line">    try_files $uri /$uri /index.html;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">include servers/*;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上面這份config為例，我們會在root也就是電腦根目錄，下面的var資料夾下創建www資料夾．</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/var/www/um1215-webclient/</div></pre></td></tr></table></figure>
+<p>之後裡面放入um1215-webclient資料夾(隨意取名)，然後再把我們剛build產生出的build資料夾放入</p>
+<blockquote>
+<p>注意事項：build資料夾內要把index.html檔案放入，並且index.html內要有bundle.js的script引入</p>
+</blockquote>
+<p>之後重啟nginx即可</p>
+<p>mac<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nginx -s stop &amp;&amp; sudo nginx</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/11/26/test0/" data-id="civz2kp7w0002b5i7hmqwmoxx" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/11/26/test3/" class="article-date">
+  <time datetime="2016-11-26T10:02:22.000Z" itemprop="datePublished">2016-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#test3</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/11/26/test3/" data-id="civz2kp810004b5i7bude568z" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/11/26/test/" class="article-date">
+  <time datetime="2016-11-26T09:51:19.000Z" itemprop="datePublished">2016-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#2016-11-16移站自此</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/11/26/test/" data-id="civz2kp7s0001b5i782j1wqk0" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-React-redux-isomorphic-application" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/11/17/React-redux-isomorphic-application/" class="article-date">
+  <time datetime="2016-11-17T01:21:43.000Z" itemprop="datePublished">2016-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="React-redux-isomorphic-application-常見注意事項"><a href="#React-redux-isomorphic-application-常見注意事項" class="headerlink" title="React redux isomorphic application 常見注意事項"></a>React redux isomorphic application 常見注意事項</h1><h2 id="新增元件："><a href="#新增元件：" class="headerlink" title="新增元件："></a>新增元件：</h2><p>stateless component 放在component，有class的放在container</p>
+<h2 id="點擊事件記得如下"><a href="#點擊事件記得如下" class="headerlink" title="點擊事件記得如下"></a>點擊事件記得如下</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;Element onClick=&#123;() =&gt; <span class="keyword">this</span>.loginBtnClick() &#125; /&gt;</div><div class="line"></div><div class="line">loginBtnClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="number">123</span>)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="記得，如果把action檔案名稱取的跟action-object內action-function名稱一樣會造成有時import後找不到action現象"><a href="#記得，如果把action檔案名稱取的跟action-object內action-function名稱一樣會造成有時import後找不到action現象" class="headerlink" title="記得，如果把action檔案名稱取的跟action object內action function名稱一樣會造成有時import後找不到action現象"></a>記得，如果把action檔案名稱取的跟action object內action function名稱一樣會造成有時import後找不到action現象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h2 id="在react-component-class內的方法內如果有含有callback的function會找不到this需使用綁定方法傳入"><a href="#在react-component-class內的方法內如果有含有callback的function會找不到this需使用綁定方法傳入" class="headerlink" title="在react component class內的方法內如果有含有callback的function會找不到this需使用綁定方法傳入"></a>在react component class內的方法內如果有含有callback的function會找不到this需使用綁定方法傳入</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">const</span> context = <span class="keyword">this</span>;</div><div class="line">    socket.on(<span class="string">'updateArticle'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</div><div class="line">      <span class="keyword">const</span> payload = msg[msg.length<span class="number">-1</span>];</div><div class="line">      context.props.addArticleAction(&#123;</div><div class="line">        <span class="attr">_id</span>: payload._id,</div><div class="line">        <span class="attr">title</span>: payload.title,</div><div class="line">        <span class="attr">content</span>: payload.content,</div><div class="line">        <span class="attr">author</span>: payload.posterAccount,</div><div class="line">        <span class="attr">date</span>: payload.PostDate,</div><div class="line">      &#125;);</div><div class="line">    &#125;);</div><div class="line">  &#125;;</div><div class="line"><span class="string">``</span><span class="string">`</span></div></pre></td></tr></table></figure>
+<p>TEST<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 操作DOM</div><div class="line"></div><div class="line"></div><div class="line">```javascript</div><div class="line"></div><div class="line"> import &#123; findDOMNode &#125; from &apos;react-dom&apos;;</div><div class="line"></div><div class="line">componentDidMount()&#123;</div><div class="line">  console.log(findDOMNode(this.refs.chart))</div><div class="line">&#125;</div><div class="line">&lt;div style=&#123;this.props.style&#125;&gt;</div><div class="line">  &lt;ReactHighcharts ref=&#123;c =&gt; this.chart = c&#125;  config = &#123;this.props.config || this.state.config&#125; ref=&quot;chart&quot;/&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="在元件引入action後"><a href="#在元件引入action後" class="headerlink" title="在元件引入action後"></a>在元件引入action後</h2><p>原本要加上require(store)並使用dispatch一個action<br>但可直接把action加入mapdispatchtoprop來不用引入store</p>
+<h2 id="巢狀setState"><a href="#巢狀setState" class="headerlink" title="巢狀setState"></a>巢狀setState</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> cancel = <span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</div><div class="line"> props.context.state[props.content].value;</div><div class="line">  props.context.setState(</div><div class="line">    &#123;</div><div class="line">      [element]: &#123;</div><div class="line">        <span class="attr">show</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">value</span>: props.context.state[props.content].value</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  );</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h2><p>如果在component讀取props傳入的parent context，而讀取context的state顯示的話，如果該parent的state是ajax得到的，則子component會再重新整理後，因為request重新發出後來沒拿到就使用parent的空state來mount component導致之後parent的state拿到值後component依舊顯示空值</p>
+<p>解決方法為再parent寫入props給component顯示（initValue），而不是讓component去讀parent的state顯示<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;EditableField</div><div class="line">  content=<span class="string">"ID"</span></div><div class="line">  context=&#123;<span class="keyword">this</span>&#125;</div><div class="line">  placeholder=<span class="string">"會員系統 ID"</span></div><div class="line">  container=&#123;&#123; <span class="attr">width</span>: <span class="string">'380px'</span> &#125;&#125;</div><div class="line">  input=&#123;&#123; <span class="attr">width</span>: <span class="string">'600px'</span> &#125;&#125;</div><div class="line">  noPen=&#123;<span class="literal">true</span>&#125;</div><div class="line">  initValue=&#123;<span class="keyword">this</span>.props.sysID&#125;</div><div class="line">/&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h2><p>如果把redux的state綁到component的state，例如使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>() &#123;</div><div class="line">  <span class="keyword">super</span>();</div><div class="line">  <span class="keyword">this</span>.state = &#123;</div><div class="line">    <span class="attr">showArticleModal</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">dialog</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">dialogText</span>: <span class="keyword">this</span>.props.user</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>會造成錯誤<br>因為那時this.props還是undefined</p>
+<h2 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h2><p>子代往父傳props</p>
+<p>子代<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">handleChange = <span class="function">(<span class="params">date</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">this</span>.props.onChange(date.format());</div><div class="line">  <span class="keyword">this</span>.setState(&#123;</div><div class="line">    <span class="attr">startDate</span>: date,</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>父代<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;DataPickerWrapper onChange=&#123;<span class="keyword">this</span>.date&#125;  /&gt;</div></pre></td></tr></table></figure></p>
+<p>會在i接到資料<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">date(i) &#123;</div><div class="line">  <span class="built_in">console</span>.log(i)</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>但是這樣在date裡面的this會指向on change</p>
+<p>所以date要寫在render(){}內<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">  <span class="keyword">const</span> date = <span class="function">(<span class="params">i</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.setState(&#123;</div><div class="line">      <span class="attr">Birthday</span>: &#123;</div><div class="line">        <span class="attr">value</span>: i</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><p>使用div 的 contentEditable=”true”<br>後無法觸發on change<br>可寫如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">componentDidMount () &#123;</div><div class="line">  findDOMNode(<span class="keyword">this</span>.refs.div1).addEventListener(<span class="string">'keydown'</span>,(e) =&gt; &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.refs.div1.innerHTML)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="10"><a href="#10" class="headerlink" title="10."></a>10.</h2><p>路徑使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ArticleBlock <span class="keyword">from</span> <span class="string">'../components/utils/ArticleBlock/'</span>;</div></pre></td></tr></table></figure></p>
+<p>最後面的斜線預設會去使用資料夾內的index檔案</p>
+<h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2><p>在isomorphic內因為node會先去用client code在server跑一次所以如果有css 檔案，寫loader會無效，所以必須加上如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'babel-core/register'</span>)(&#123;</div><div class="line">  <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">&#125;);</div><div class="line"><span class="built_in">require</span>.extensions[<span class="string">'.scss'</span>] = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span>;</div><div class="line">&#125;;</div><div class="line"><span class="built_in">require</span>.extensions[<span class="string">'.css'</span>] = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/webpack/webpack/issues/1754" target="_blank" rel="external">https://github.com/webpack/webpack/issues/1754</a></p>
+<h2 id="12"><a href="#12" class="headerlink" title="12"></a>12</h2><p>如何做權限控制router</p>
+<p>寫在router的根源件使用如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">componentDidMount() &#123;</div><div class="line"></div><div class="line">  browserHistory.listen( <span class="function"><span class="params">location</span> =&gt;</span>  &#123;</div><div class="line">   <span class="keyword">if</span> (location.pathname === <span class="string">'/personalinfo'</span>) &#123;</div><div class="line">     <span class="keyword">if</span> (<span class="keyword">this</span>.props.userInfo.login !== <span class="literal">true</span>) &#123;</div><div class="line">       browserHistory.push(<span class="string">'/login'</span>);</div><div class="line">     &#125;</div><div class="line">   &#125;</div><div class="line">  &#125;);</div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/ReactTraining/react-router/issues/3554" target="_blank" rel="external">https://github.com/ReactTraining/react-router/issues/3554</a></p>
+<h2 id="13"><a href="#13" class="headerlink" title="13."></a>13.</h2><p>假設dispatch action後，並在元件使用mapstatetoprops，要偵測狀態改變並讓元件改變，可使用componentWillReceiveProps<br>如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">componentWillReceiveProps(nextProps) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.props.setLogin !== nextProps.setLogin)&#123;</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="14-setState為非同步，但可以有callback"><a href="#14-setState為非同步，但可以有callback" class="headerlink" title="14  setState為非同步，但可以有callback"></a>14  setState為非同步，但可以有callback</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.setState(&#123; <span class="attr">something</span>: <span class="literal">true</span> &#125;, () =&gt; <span class="built_in">console</span>.log(<span class="keyword">this</span>.state))</div></pre></td></tr></table></figure>
+<h2 id="15-isomorphic的前端code會在後端跑一次，避免的方法是可以放在componentDidmount及不會在後端被跑到"><a href="#15-isomorphic的前端code會在後端跑一次，避免的方法是可以放在componentDidmount及不會在後端被跑到" class="headerlink" title="15 isomorphic的前端code會在後端跑一次，避免的方法是可以放在componentDidmount及不會在後端被跑到"></a>15 isomorphic的前端code會在後端跑一次，避免的方法是可以放在componentDidmount及不會在後端被跑到</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">很多前端code如放在componentWillMount 會被server跑到而出錯</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">使用axios時如出錯，需加上完整路徑，如localhost:<span class="number">3000</span>/....</div></pre></td></tr></table></figure>
+<h2 id="16-回傳值如為html的string可以不用使用parser直接給入dangerousSetInnerHTML即可"><a href="#16-回傳值如為html的string可以不用使用parser直接給入dangerousSetInnerHTML即可" class="headerlink" title="16.回傳值如為html的string可以不用使用parser直接給入dangerousSetInnerHTML即可"></a>16.回傳值如為html的string可以不用使用parser直接給入dangerousSetInnerHTML即可</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div</div><div class="line">  ref=<span class="string">"div1"</span></div><div class="line">  style=&#123;style.textarea&#125;</div><div class="line">  dangerouslySetInnerHTML=&#123;&#123;</div><div class="line">  <span class="attr">__html</span>:<span class="keyword">this</span>.props.activeArticle.content</div><div class="line"> &#125;&#125;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h2 id="17"><a href="#17" class="headerlink" title="17"></a>17</h2><p>componentwillReceiveProps不會觸發，如果是從別的元件轉到這個元件時，所以要加上componentWillMount<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">componentWillMount() &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.props.userInfo) &#123;</div><div class="line">      axios.get(<span class="string">'/userArticles/'</span> + <span class="keyword">this</span>.props.userInfo.account)</div><div class="line">      .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123; <span class="attr">articles</span>: response.data &#125;)</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">componentWillReceiveProps(nextProps) &#123;</div><div class="line">  <span class="keyword">if</span> (nextProps.userInfo) &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.userInfoFlag) &#123;</div><div class="line">      <span class="keyword">this</span>.setState(&#123; <span class="attr">userInfoFlag</span>: <span class="literal">false</span>&#125;)</div><div class="line">      axios.get(<span class="string">'/userArticles/'</span> + nextProps.userInfo.account)</div><div class="line">      .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123; <span class="attr">articles</span>: response.data &#125;)</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/blog/2016/11/17/React-redux-isomorphic-application/" data-id="civz2kp760000b5i717hx0nin" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2016/11/26/test4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/11/26/test0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/11/26/test3/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/11/26/test/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/11/17/React-redux-isomorphic-application/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 yicheng<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>
